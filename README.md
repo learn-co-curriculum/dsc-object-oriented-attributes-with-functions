@@ -1,5 +1,5 @@
 
-# Python Attributes Functions
+# Object Oriented Attributes with Functions
 
 ## Introduction
 We've been learning a lot about different parts of object oriented programming. We learned about classes and what purpose they serve. We've seen instance objects, instance variables, and instance methods and how these things all work with each other. In this lab, we will talk about what a **domain model** is and how it ties into object oriented programming.
@@ -32,7 +32,6 @@ class Business():
         business.biz_type = biz_type
         business.city = city
         business.customers = customers
-
 ```
 
 ## Defining Methods with Attributes
@@ -178,11 +177,11 @@ for i in range(10):
 startup.top_n_customers(5)
 ```
 
-    Isabella 1480
-    Liam 1215
-    Benjamin 1145
-    Oliver 805
-    Evelyn 710
+    Isabella 1650
+    Ava 1510
+    Mia 1390
+    Ava 1220
+    Logan 1115
 
 
 
@@ -190,16 +189,16 @@ startup.top_n_customers(5)
 startup.top_n_customers(50)
 ```
 
-    Isabella 1480
-    Liam 1215
-    Benjamin 1145
-    Oliver 805
-    Evelyn 710
-    James 620
-    Liam 470
-    Amelia 365
-    Olivia 160
-    Noah 20
+    Isabella 1650
+    Ava 1510
+    Mia 1390
+    Ava 1220
+    Logan 1115
+    Ava 940
+    James 780
+    Olivia 630
+    Benjamin 425
+    Ava 185
 
 
 ## Summary
