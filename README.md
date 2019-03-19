@@ -2,7 +2,7 @@
 # Object Oriented Attributes with Functions
 
 ## Introduction
-We've been learning a lot about different parts of object oriented programming. We learned about classes and what purpose they serve. We've seen instance objects, instance variables, and instance methods and how these things all work with each other. In this lab, we will talk about what a **domain model** is and how it ties into object oriented programming.
+You've been learning a lot about different parts of object oriented programming; you've seenthe purpose of classes, you've seen instance objects, instance variables, and instance methods and how these things all work with each other. In this lab, you'll talk about what a **domain model** is and how it ties into object oriented programming.
 
 ## Objectives
 
@@ -14,17 +14,17 @@ You will be able to:
 
 ## What Is a Domain Model?
 
-A domain model is the representation of a real-world concept or structure translated in to software. This is a key function of object orientation. So far, our Python classes have been used as blueprints or templates for  instance objects of that class. As an example, a Driver class would create driver intsance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
+A domain model is the representation of a real-world concept or structure translated in to software. This is a key function of object orientation. So far, your Python classes have been used as blueprints or templates for  instance objects of that class. As an example, a Driver class would create driver intsance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
 
-A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a Driver class, we could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. We could imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, we could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
+A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a Driver class, you could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. Imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, you could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
 
-As we become more fluent in object oriented programming and our programs become more complex, we will see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own which interact with each other. 
+As you become more fluent in object oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own which interact with each other. 
 
-In this lecture, we will be using a business as our domain model. With this, we will continue to see how attributes and methods can be combined to perform operations and store values simultaneously.
+In this lecture, you'll be using a business as our domain model. With this, you'll continue to see how attributes and methods can be combined to perform operations and store values simultaneously.
 
 ## Creating the Class
 
-Let's again start by creating a very simple class.
+Here's a simple class template:
 
 
 ```python
@@ -38,7 +38,7 @@ class Business():
 
 ## Defining Methods with Attributes
 
-As we've seen, we can define both methods (functions) and attributes of class objects. Let's start to look at how we can combine those. As we've seen before, let's create a method that lets you update an attribute.
+As you've seen, you can define both methods (functions) and attributes of class objects. Here's a method that lets you update an attribute.
 
 
 ```python
@@ -53,9 +53,9 @@ class Business():
 ```
 
 ## Thinking about appropriate structures
-At this point in creating our data structures, we can think about what we want a customer to be. It could be a dictionary storing various attributes about that customer such as name, orders, etc. It could also be a class of it's own. Thinking through the use case and allowing flexability is a key design decision.  
+At this point in creating our data structures, you can think about what you want a customer to be. It could be a dictionary storing various attributes about that customer such as name, orders, etc. It could also be a class of it's own. Thinking through the use case and allowing flexability is a key design decision.  
 
-For maximum future flexability, we'll go through the added effort of defining an additional class for customers.
+For maximum future flexability, you might define an additional class for customers like this:
 
 
 ```python
@@ -70,7 +70,7 @@ class Customer():
 
 ## Writing more complicated methods using attriubtes
 
-At this point, let's take a look at an example that is a bit more complicated now that we have some nested structures. Let's imagine a reporting method for the business that will return the top 5 customers to date based on their purchase history. To do this, we will have to determine the total purchases made by customers and then sort our customers by this. Currently the data needed for that is stored within a customer object within the orders attribute which is a list of dictionaries. Quite the mouthful there; an object with an attribute that's a list of dictionaries. Breaking down the problem into constituent parts can help us reduce solving the same problems over and over again. As such, before we write a larger business function to retrieve the top 5 customers, let's update our customer object to also keep track of total spent.
+Imagine a reporting method for the business that will return the top 5 customers to date based on their purchase history. To do this, you'd have to determine the total purchases made by customers and then sort our customers by this. Currently the data needed for that is stored within a customer object within the orders attribute which is a list of dictionaries. Quite the mouthful there; an object with an attribute that's a list of dictionaries. Breaking down the problem into constituent parts can help reduce solving the same problems over and over again. As such, before writing a larger business function to retrieve the top 5 customers, a constituent piece is to update the customer object to also keep track of total spent.
 
 
 ```python
@@ -85,7 +85,7 @@ class Customer():
         self.total_spent += item_cost * quantity
 ```
 
-Now our previous problem is greatly simplified; our customer objects directly have an attribute for the total spent. We can write a method for top customers with much greater ease.
+Now the previous problem is greatly simplified; the customer objects directly have an attribute for the total spent. You can write a method for top customers with much greater ease:
 
 
 ```python
@@ -105,7 +105,7 @@ class Business():
 
 ## Trying it out: Creating an Instance
 
-Let's try this all out! First let's create a simple business instance.
+Finally you can try it all out:
 
 
 ```python
@@ -144,7 +144,7 @@ customer1.total_spent
 
 ## Generating Customers and orders at scale
 
-Let's take this to the next level an systematically add some fake data to test our fancier method on. To do this, we'll also use some NumPy's built in random methods to randomly select quantities of orders and items.
+Now you can systematically add some fake data to test the fancier method on. You can use some NumPy's built in random methods to randomly select quantities of orders and items.
 
 
 ```python
@@ -204,4 +204,4 @@ startup.top_n_customers(50)
 
 
 ## Summary
-In this lesson, we were able to mimic a complex domain model using a Business and customer class with a few instance methods and variables. Soon we will see that our domain models will use other classes, instance methods, and instance variables to create more functionality in our programs.
+In this lesson, you were able to mimic a complex domain model using a Business and customer class with a few instance methods and variables.
