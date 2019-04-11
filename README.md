@@ -2,7 +2,7 @@
 # Object Oriented Attributes with Functions
 
 ## Introduction
-You've been learning a lot about different parts of object oriented programming; you've seenthe purpose of classes, you've seen instance objects, instance variables, and instance methods and how these things all work with each other. In this lab, you'll talk about what a **domain model** is and how it ties into object oriented programming.
+You've been learning a lot about different parts of object-oriented programming; you've seen the purpose of classes, you've seen instance objects, instance variables, and instance methods and how these things all work with each other. In this lab, you'll talk about what a **domain model** is and how it ties into object-oriented programming.
 
 ## Objectives
 
@@ -14,11 +14,11 @@ You will be able to:
 
 ## What Is a Domain Model?
 
-A domain model is the representation of a real-world concept or structure translated in to software. This is a key function of object orientation. So far, your Python classes have been used as blueprints or templates for  instance objects of that class. As an example, a Driver class would create driver intsance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
+A domain model is the representation of a real-world concept or structure translated into software. This is a key function of object orientation. So far, your Python classes have been used as blueprints or templates for instance objects of that class. As an example, a Driver class would create driver instance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
 
 A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a Driver class, you could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. Imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, you could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
 
-As you become more fluent in object oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own which interact with each other. 
+As you become more fluent in object-oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own which interact with each other. 
 
 In this lecture, you'll be using a business as our domain model. With this, you'll continue to see how attributes and methods can be combined to perform operations and store values simultaneously.
 
