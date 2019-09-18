@@ -18,7 +18,7 @@ A domain model is the representation of a real-world concept or structure transl
 
 A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a Driver class, you could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. Imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, you could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
 
-As you become more fluent in object-oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own which interact with each other. 
+As you become more fluent in object-oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own that interact with each other. 
 
 In this lecture, you'll be using a business as our domain model. With this, you'll continue to see how attributes and methods can be combined to perform operations and store values simultaneously.
 
@@ -53,9 +53,9 @@ class Business():
 ```
 
 ## Thinking about appropriate structures
-At this point in creating our data structures, you can think about what you want a customer to be. It could be a dictionary storing various attributes about that customer such as name, orders, etc. It could also be a class of it's own. Thinking through the use case and allowing flexability is a key design decision.  
+At this point in creating our data structures, you can think about what you want a customer to be. It could be a dictionary storing various attributes about that customer such as name, orders, etc. It could also be a class of its own. Thinking through the use case and allowing flexibility is a key design decision.  
 
-For maximum future flexability, you might define an additional class for customers like this:
+For maximum future flexibility, you might define an additional class for customers like this:
 
 
 ```python
@@ -70,7 +70,7 @@ class Customer():
 
 ## Writing more complicated methods using attriubtes
 
-Imagine a reporting method for the business that will return the top 5 customers to date based on their purchase history. To do this, you'd have to determine the total purchases made by customers and then sort our customers by this. Currently the data needed for that is stored within a customer object within the orders attribute which is a list of dictionaries. Quite the mouthful there; an object with an attribute that's a list of dictionaries. Breaking down the problem into constituent parts can help reduce solving the same problems over and over again. As such, before writing a larger business function to retrieve the top 5 customers, a constituent piece is to update the customer object to also keep track of total spent.
+Imagine a reporting method for the business that will return the top 5 customers to date based on their purchase history. To do this, you'd have to determine the total purchases made by customers and then sort our customers by this. Currently, the data needed for that is stored within a customer object within the orders attribute which is a list of dictionaries. Quite the mouthful there; an object with an attribute that's a list of dictionaries. Breaking down the problem into constituent parts can help reduce solving the same problems over and over again. As such, before writing a larger business function to retrieve the top 5 customers, a constituent piece is to update the customer object to also keep track of the total spent.
 
 
 ```python
