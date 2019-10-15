@@ -8,9 +8,9 @@ You've been learning a lot about different parts of object-oriented programming;
 
 You will be able to:
 
-* Understand the concept of a domain model
-* Create a domain model
-* Define instance methods that operate on nested data structures
+* Describe the concept of a domain model
+* Create a domain model using OOP
+* Create instance methods that operate on instance attributes
 
 ## What Is a Domain Model?
 
@@ -204,4 +204,4 @@ startup.top_n_customers(50)
 
 
 ## Summary
-In this lesson, you were able to mimic a complex domain model using a Business and customer class with a few instance methods and variables.
+In this lesson, you were able to mimic a complex domain model using a business and customer class with a few instance methods and variables.
