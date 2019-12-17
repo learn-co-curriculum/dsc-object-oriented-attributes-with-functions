@@ -12,11 +12,11 @@ You will be able to:
 * Create a domain model using OOP
 * Create instance methods that operate on instance attributes
 
-## What Is a Domain Model?
+## What is a Domain Model?
 
-A domain model is the representation of a real-world concept or structure translated into software. This is a key function of object orientation. So far, your Python classes have been used as blueprints or templates for instance objects of that class. As an example, a Driver class would create driver instance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
+A domain model is the representation of a real-world concept or structure translated into software. This is a key function of object orientation. So far, your Python classes have been used as blueprints or templates for instance objects of that class. As an example, a `Driver` class would create driver instance objects, and the class would define a basic structure for what that driver instance object should look like and what capabilities it should have. But a class is only one part of a domain model just as, typically, a driver is only one part of a larger structure.
 
-A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a Driver class, you could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. Imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, you could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
+A domain model is meant to mirror that larger, real-world structure. It is more than just one class, it is an entire environment that often depends on other parts or classes to function properly. So, in keeping with a `Driver` class, you could use the example of a taxi and limousine service as our domain model. There are many more parts to a service like this than drivers alone. Imagine dispatchers, mechanics, accountants, passengers, etc., all being part of the structure of this domain model. In a simplified example, you could have instance and class methods handle things like `dispatch_driver`, `calculate_revenue_from_rides`, `service_taxi`, or any other function of a taxi and limousine service.
 
 As you become more fluent in object-oriented programming and your programs become more complex, you'll see that the other parts of a domain model like passengers, dispatchers, etc., will be classes of their own that interact with each other. 
 
@@ -29,7 +29,7 @@ Here's a simple class template:
 
 ```python
 class Business():
-    def __init__(name=None, biz_type=None, city=None, customers = {}):
+    def __init__(name=None, biz_type=None, city=None, customers = []):
         business.name = name
         business.biz_type = biz_type
         business.city = city
@@ -142,9 +142,9 @@ customer1.total_spent
 
 
 
-## Generating Customers and orders at scale
+## Generating customers and orders at scale
 
-Now you can systematically add some fake data to test the fancier method on. You can use some NumPy's built in random methods to randomly select quantities of orders and items.
+Now you can systematically add some fake data to test the fancier method on. You can use some NumPy's built-in random methods to randomly select quantities of orders and items.
 
 
 ```python
@@ -159,16 +159,16 @@ names = ['Liam',  'Emma', 'Noah','Olivia','William','Ava',
 items = [('sweater',50), ('scarf', 35), ('gloves', 20), ('hat', 20)]
 
 for i in range(10):
-    customer = Customer(name=np.random.choice(names)) #Create a customer
-    n_orders = np.random.randint(1,5) #Create an order or two, or three, or four, or five!
+    customer = Customer(name=np.random.choice(names)) # Create a customer
+    n_orders = np.random.randint(1, 5) # Create an order or two, or three, or four, or five!
     for order_n in range(n_orders):
-        idx = np.random.choice(len(items)) #np.random.choice doesn't work with nested lists; workaround
+        idx = np.random.choice(len(items)) # np.random.choice doesn't work with nested lists; workaround
         item = items[idx]
         item_name = item[0]
         item_price = item[1]
         quantity = np.random.randint(1,4)
         customer.add_order(item_name, item_price, quantity)
-    #Add the customer to our business
+    # Add the customer to our business
     startup.add_customer(customer)
 ```
 
